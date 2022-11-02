@@ -17,7 +17,7 @@ class Node:
         self.num = node_num
         self.edges = edges[::]
 
-    def add_edge(self, to_node: Node, weight):
+    def add_edge_to_node(self, to_node: Node, weight):
         self.edges.append(Edge(weight, to_node))
 
     def __repr__(self):
