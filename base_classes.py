@@ -17,7 +17,7 @@ class Node:
         self.num = node_num
         self.edges = edges[::]
 
-    def add_edge(self, to_node: Node, weight):
+    def add_edge_to_node(self, to_node: Node, weight):
         self.edges.append(Edge(weight, to_node))
 
     def __repr__(self):
@@ -28,7 +28,7 @@ class Graph(abc.ABC):
     nodes = {}
 
     @abc.abstractmethod
-    def add_edge(self, from_node_num: int, to_node_num: int, weight: int = 0):
+    def insert_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
         pass
 
     def insert_node(self, node_num: int = None):
@@ -37,3 +37,4 @@ class Graph(abc.ABC):
             return True
 
         return False
+
