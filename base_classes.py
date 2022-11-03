@@ -28,7 +28,7 @@ class Graph(abc.ABC):
     nodes = {}
 
     @abc.abstractmethod
-    def insert_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
+    def add_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
         pass
 
     def insert_node(self, node_num: int = None):

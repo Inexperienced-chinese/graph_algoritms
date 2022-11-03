@@ -1,1 +1,3 @@
-INF = 1e10
+import math
+
+INF = math.inf
