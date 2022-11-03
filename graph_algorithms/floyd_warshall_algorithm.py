@@ -5,7 +5,7 @@ from constants import INF
 from graph_classes import DirectedGraph
 
 
-def floyd_warshall_algorithm(graph: Graph, start_node: int, finish_node: int) -> tuple[dict[dict], defaultdict]:
+def floyd_warshall_algorithm(graph: Graph) -> tuple[dict[dict], defaultdict]:
     matrix = build_matrix(graph)
     prevs = defaultdict(dict)
     nodes = graph.nodes.keys()
@@ -34,13 +34,3 @@ def build_matrix(graph: Graph) -> dict[dict]:
             matrix[i_node][edge.to_node.num] = edge.weight
 
     return matrix
-
-
-graph = DirectedGraph()
-
-graph.insert_edge(1, 2)
-graph.insert_edge(2, 3)
-graph.insert_edge(3, 4)
-graph.insert_edge(4, 1)
-
-print(floyd_warshall_algorithm(graph, 1, 4))

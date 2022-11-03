@@ -3,10 +3,10 @@ from constants import INF
 from graph_classes import DirectedGraph
 
 
-def dijkstra_algorithm(graph: Graph, start_node: int, finish_node: int) -> tuple[dict, dict]:
+def dijkstra_algorithm(graph: Graph, start_node: int) -> tuple[dict, dict]:
     nodes_count = len(graph.nodes.keys())
     prevs = dict()
-    prevs[graph.nodes[start_node]] = None
+    prevs[graph.nodes[start_node]] = -1
 
     used = set()
 
@@ -33,15 +33,6 @@ def dijkstra_algorithm(graph: Graph, start_node: int, finish_node: int) -> tuple
         for edge in node.edges:
             if distance[edge.to_node.num] > edge.weight + distance[curr_node_num]:
                 distance[edge.to_node.num] = edge.weight + distance[curr_node_num]
-                prevs[node] = edge.to_node
+                prevs[edge.to_node.num] = curr_node_num
 
     return distance, prevs
-
-
-graph = DirectedGraph()
-
-graph.insert_edge(1, 2)
-graph.insert_edge(2, 3)
-graph.insert_edge(3, 4)
-
-print(dijkstra_algorithm(graph, 1, 4))
