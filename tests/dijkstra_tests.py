@@ -7,7 +7,7 @@ from parameterized import parameterized
 from tests.utils import create_graph_from_test, get_params
 
 
-class FordBellmanAlgoTests(unittest.TestCase):
+class DijkstraAlgoTests(unittest.TestCase):
     @parameterized.expand(get_params(['graph_without_neg_widths']))
     def tests(self, test_name, graph_in_edge, node_min_width_ans, node_ancestor_ans):
         graph = create_graph_from_test(graph_in_edge)
