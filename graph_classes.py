@@ -2,9 +2,11 @@ from base_classes import Graph
 
 
 class UnDirectedGraph(Graph):
-    nodes = {}
+    def __init__(self):
+        self.nodes = {}
 
-    def insert_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
+
+    def add_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
         self.insert_node(from_node_num)
         self.insert_node(to_node_num)
 
@@ -13,9 +15,10 @@ class UnDirectedGraph(Graph):
 
 
 class DirectedGraph(Graph):
-    nodes = {}
+    def __init__(self):
+        self.nodes = {}
 
-    def insert_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
+    def add_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
         self.insert_node(from_node_num)
         self.insert_node(to_node_num)
 
