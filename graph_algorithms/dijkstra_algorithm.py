@@ -3,7 +3,7 @@ from constants import INF
 from graph_classes import DirectedGraph
 
 
-def dijkstra_algorithm(graph: Graph, start_node: int, finish_node: int):
+def dijkstra_algorithm(graph: Graph, start_node: int, finish_node: int) -> tuple[dict, dict]:
     nodes_count = len(graph.nodes.keys())
     prevs = dict()
     prevs[graph.nodes[start_node]] = None
