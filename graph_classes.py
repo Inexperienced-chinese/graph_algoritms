@@ -5,6 +5,7 @@ class UnDirectedGraph(Graph):
     def __init__(self):
         self.nodes = {}
 
+
     def add_edge(self, from_node_num: int, to_node_num: int, weight: int = 1):
         self.insert_node(from_node_num)
         self.insert_node(to_node_num)
