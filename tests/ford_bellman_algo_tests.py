@@ -1,6 +1,6 @@
 from math import inf
 import unittest
-from ford_bellman_algo import ford_bellman_algo
+from graph_algorithms.ford_bellman_algo import ford_bellman_algo
 from graph_classes import DirectedGraph
 from parameterized import parameterized
 
