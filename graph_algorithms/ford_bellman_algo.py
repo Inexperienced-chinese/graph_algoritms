@@ -1,11 +1,9 @@
 from math import inf
-
 from typing import Tuple, Dict
-
 from base_classes import Graph, Node, Edge
 
 
-def ford_bellman_algo(self: Graph, start_node: int) -> Tuple[Dict[int, int], Dict]:
+def ford_bellman_algo(self: Graph, start_node: int) -> Tuple[Dict[int, int], Dict[int, int]]:
     node_min_width = {}
     for node in self.nodes:
         node_min_width[node] = inf
