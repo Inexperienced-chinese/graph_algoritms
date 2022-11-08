@@ -1,3 +1,5 @@
+from typing import List
+
 from constants import INF
 from graph_classes import DirectedGraph
 
@@ -37,7 +39,7 @@ def create_graph_from_test(edges):
     return graph
 
 
-def get_params(param_names: list[str]):
+def get_params(param_names: List[str]):
 
     params = [param for param in PARAMS if param[0] in param_names]
 
