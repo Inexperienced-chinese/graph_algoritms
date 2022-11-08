@@ -1,9 +1,11 @@
+from typing import Tuple, Dict
+
 from base_classes import Graph
 from constants import INF
 from graph_classes import DirectedGraph
 
 
-def dijkstra_algorithm(graph: Graph, start_node: int) -> tuple[dict, dict]:
+def dijkstra_algorithm(graph: Graph, start_node: int) -> Tuple[Dict[int, int], Dict[int, int]]:
     nodes_count = len(graph.nodes.keys())
     prevs = dict()
     prevs[graph.nodes[start_node]] = -1

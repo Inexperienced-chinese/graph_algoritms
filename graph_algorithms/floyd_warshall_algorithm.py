@@ -1,11 +1,13 @@
 from collections import defaultdict
 
+from typing import Tuple, Dict
+
 from base_classes import Graph
 from constants import INF
 from graph_classes import DirectedGraph
 
 
-def floyd_warshall_algorithm(graph: Graph) -> tuple[dict[dict], defaultdict]:
+def floyd_warshall_algorithm(graph: Graph) -> Tuple[Dict[dict], defaultdict]:
     matrix = build_matrix(graph)
     prevs = defaultdict(dict)
     nodes = graph.nodes.keys()
